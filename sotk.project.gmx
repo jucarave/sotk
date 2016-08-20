@@ -83,9 +83,6 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\sprBlock</sprite>
-    <sprites name="Misc">
-      <sprite>sprites\sprLight</sprite>
-    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\textures</background>
@@ -102,6 +99,8 @@
       <script>scripts\scrCreateCeil.gml</script>
       <script>scripts\scrCreateWalls.gml</script>
       <script>scripts\scrCreateObject.gml</script>
+      <script>scripts\scrLoadBedroom.gml</script>
+      <script>scripts\scrLoadWorld.gml</script>
     </scripts>
     <scripts name="System">
       <script>scripts\scrInitSystem.gml</script>
@@ -140,9 +139,9 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rooTest</room>
+    <room>rooms\rooBedroom</room>
   </rooms>
-  <constants number="15">
+  <constants number="16">
     <constant name="MESH_MODEL">0</constant>
     <constant name="MESH_MAT">1</constant>
     <constant name="MESH_REPEAT">2</constant>
@@ -158,6 +157,7 @@
     <constant name="TEX_FULL">5</constant>
     <constant name="MDL_BEDROOM">"Rooms/bedroom.obj"</constant>
     <constant name="MDL_HAND">"Animations/handAnim.obj"</constant>
+    <constant name="WORLD_BEDROOM">0</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
