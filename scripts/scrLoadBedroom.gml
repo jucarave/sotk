@@ -19,4 +19,3 @@ ins.z = 32;
 ins = instance_create(45, 45, objLight);
 ins.z = 28;
 ins.color = scrArray(1.0, 1.0, 1.0);
-ins.position = scrArray(0, 0, 0);

@@ -35,6 +35,31 @@ animNum = array_length_1d(model);
 animSpd = 0;
 
 active = false;
+
+alarm[0] = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scrSubscribeBoundingBox(x, y-2, z-2, 12, 5, 3, id);
 </string>
           </argument>
         </arguments>
@@ -71,7 +96,7 @@ if (animIndex &gt;= animNum){
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="7" enumb="10">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -88,7 +113,7 @@ if (animIndex &gt;= animNum){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!active &amp;&amp; keyboard_check_pressed(vk_enter)){
+            <string>if (!active) {
     active = true;
     animInd = 0;
     animSpd = 1 / 5;

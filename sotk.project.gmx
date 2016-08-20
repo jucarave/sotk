@@ -103,10 +103,12 @@
       <script>scripts\scrLoadWorld.gml</script>
     </scripts>
     <scripts name="System">
+      <script>scripts\scrSubscribeBoundingBox.gml</script>
       <script>scripts\scrInitSystem.gml</script>
       <script>scripts\scrInitTextures.gml</script>
       <script>scripts\scrArray.gml</script>
       <script>scripts\scrStringExplode.gml</script>
+      <script>scripts\scrRaycast.gml</script>
     </scripts>
     <scripts name="3D">
       <script>scripts\scrGetModel.gml</script>
