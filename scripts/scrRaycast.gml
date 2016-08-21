@@ -22,7 +22,7 @@ var i, box, f1, f2,
     len = ds_list_size(bBoxes);  
 
 for (i=0;i<len;i++){
-    box = ds_list_find_value(bBoxes, 0);
+    box = ds_list_find_value(bBoxes, i);
     
     if (box[3] < x1 && box[3] < x2){ continue; }
     if (box[0] > x1 && box[0] > x2){ continue; }

@@ -130,6 +130,7 @@
     <objects name="Items">
       <object>objects\objHand</object>
       <object>objects\objLight</object>
+      <object>objects\objDoor</object>
     </objects>
     <objects name="System">
       <object>objects\objSystem</object>
@@ -152,7 +153,7 @@
     <constant name="MESH_Y">5</constant>
     <constant name="MESH_Z">6</constant>
     <constant name="TEX_ROOM_WALL">0</constant>
-    <constant name="TEX_ROOM_WALL_H">1</constant>
+    <constant name="TEX_ROOM_DOOR">1</constant>
     <constant name="TEX_ROOM_FLOOR">2</constant>
     <constant name="TEX_ROOM_CEIL">3</constant>
     <constant name="TEX_ROOM_HAND">4</constant>
