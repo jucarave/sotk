@@ -22,6 +22,7 @@ void main() {
 //######################_==_YOYO_SHADER_MARKER_==_######################@~uniform vec4 uUV;
 uniform vec2 uRepeat;
 
+uniform float uUseLight0;
 uniform vec3 uLight0_col;
 uniform vec3 uLight0_pos;
 
@@ -74,24 +75,23 @@ void main() {
     
     vec4 col = texture2D( gm_BaseTexture, tex );
     
-    vec3 lPos = (uLight0_pos - v_position);
-    vec3 dir = normalize(lPos);
-    
-    float weight = max(dot(normalize(v_normal), dir), 0.0);
-    vec2 coord = floor(vec2(v_coord.x / v_coord.w * 0.5 + 0.5, v_coord.y / v_coord.w * 0.5 + 0.5) * resolution);
-    
-    if (weight > 0.3){
-        weight = 1.0;
-    }else if (weight >= 0.1){
-        weight = ditherLight(weight, 0.3, 1.0, 0.8, coord);
-    }else{
-        weight = 0.8;
+    if (uUseLight0 >= 0.5){
+        vec3 lPos = (uLight0_pos - v_position);
+        vec3 dir = normalize(lPos);
+        
+        float weight = max(dot(normalize(v_normal), dir), 0.0);
+        vec2 coord = floor(vec2(v_coord.x / v_coord.w * 0.5 + 0.5, v_coord.y / v_coord.w * 0.5 + 0.5) * resolution);
+        
+        if (weight > 0.3){
+            weight = 1.0;
+        }else if (weight >= 0.1){
+            weight = ditherLight(weight, 0.3, 1.0, 0.8, coord);
+        }else{
+            weight = 0.8;
+        }
+        
+        col.rgb *= weight * uLight0_col;
     }
     
-    col.rgb *= weight * uLight0_col;
-    
-    //gl_FragColor = vec4(v_position.x / 224.0, v_position.y / 224.0, v_position.z / 100.0, 1.0);
-    //gl_FragColor = vec4((v_coord.x / 853.0) + 0.5, (v_coord.y / 480.0) + 0.5, 0.0, 1.0);
-    //gl_FragColor = vec4(v_coord.x / v_coord.w * 0.5 + 0.5, v_coord.y / v_coord.w * 0.5 + 0.5, 0.0, 1.0);
     gl_FragColor = col;
 }

@@ -17,6 +17,7 @@ ins.z = 32;
 
 // Exit Door
 ins = instance_create(224, 160, objDoor);
+ins.target = scrArray(rooHallway, 48, 96);
 ins.z = 0;
 
 // Desk lamp light

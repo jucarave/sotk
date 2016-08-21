@@ -106,10 +106,11 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rooInit</room>
     <room>rooms\rooBedroom</room>
     <room>rooms\rooHallway</room>
   </rooms>
-  <constants number="16">
+  <constants number="17">
     <constant name="MESH_MODEL">0</constant>
     <constant name="MESH_MAT">1</constant>
     <constant name="MESH_REPEAT">2</constant>
@@ -126,6 +127,7 @@
     <constant name="MDL_BEDROOM">"Rooms/bedroom.obj"</constant>
     <constant name="MDL_HAND">"Animations/handAnim.obj"</constant>
     <constant name="WORLD_BEDROOM">0</constant>
+    <constant name="WORLD_HALLWAY">1</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
