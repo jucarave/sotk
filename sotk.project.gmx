@@ -49,7 +49,7 @@
     <sprite>sprites\sprBlock</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\textures</background>
+    <background>background\texHouse</background>
     <background>background\texBedroom</background>
     <background>background\texHand</background>
   </backgrounds>
@@ -63,8 +63,12 @@
       <script>scripts\scrCreateCeil.gml</script>
       <script>scripts\scrCreateWalls.gml</script>
       <script>scripts\scrCreateObject.gml</script>
-      <script>scripts\scrLoadBedroom.gml</script>
-      <script>scripts\scrLoadWorld.gml</script>
+      <scripts name="Scenarios">
+        <script>scripts\scrLoadWorld.gml</script>
+        <script>scripts\scrLoadHBedroom.gml</script>
+        <script>scripts\scrLoadHHallway.gml</script>
+        <script>scripts\scrLoadHBathroom.gml</script>
+      </scripts>
     </scripts>
     <scripts name="System">
       <script>scripts\scrSubscribeBoundingBox.gml</script>
@@ -80,6 +84,9 @@
       <script>scripts\scrLoadOBJAnim.gml</script>
       <script>scripts\scrParseAnimation.gml</script>
       <script>scripts\scrDrawAnimation.gml</script>
+    </scripts>
+    <scripts name="Flags">
+      <script>scripts\scrInitFlags.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -107,10 +114,11 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rooInit</room>
-    <room>rooms\rooBedroom</room>
-    <room>rooms\rooHallway</room>
+    <room>rooms\rooHouseBedroom</room>
+    <room>rooms\rooHouseHallway</room>
+    <room>rooms\rooHouseBathroom</room>
   </rooms>
-  <constants number="17">
+  <constants number="24">
     <constant name="MESH_MODEL">0</constant>
     <constant name="MESH_MAT">1</constant>
     <constant name="MESH_REPEAT">2</constant>
@@ -118,16 +126,23 @@
     <constant name="MESH_X">4</constant>
     <constant name="MESH_Y">5</constant>
     <constant name="MESH_Z">6</constant>
-    <constant name="TEX_ROOM_WALL">0</constant>
-    <constant name="TEX_ROOM_DOOR">1</constant>
-    <constant name="TEX_ROOM_FLOOR">2</constant>
-    <constant name="TEX_ROOM_CEIL">3</constant>
-    <constant name="TEX_ROOM_HAND">4</constant>
-    <constant name="TEX_FULL">5</constant>
+    <constant name="TEX_FULL">0</constant>
+    <constant name="TEX_HOUSE_BROOM_WALL_1">1</constant>
+    <constant name="TEX_HOUSE_BROOM_WALL_2">2</constant>
+    <constant name="TEX_HOUSE_BROOM_DOOR">3</constant>
+    <constant name="TEX_HOUSE_BROOM_FLOOR">4</constant>
+    <constant name="TEX_HOUSE_BROOM_CARPET">5</constant>
+    <constant name="TEX_HOUSE_BROOM_CEIL">6</constant>
+    <constant name="TEX_HOUSE_BROOM_WINDOW">7</constant>
+    <constant name="TEX_HOUSE_FLOOR">8</constant>
+    <constant name="TEX_HOUSE_BATH_FLOOR">9</constant>
+    <constant name="TEX_HOUSE_BATH_WALL">10</constant>
+    <constant name="TEX_HOUSE_BATH_DOOR">11</constant>
     <constant name="MDL_BEDROOM">"Rooms/bedroom.obj"</constant>
     <constant name="MDL_HAND">"Animations/handAnim.obj"</constant>
-    <constant name="WORLD_BEDROOM">0</constant>
-    <constant name="WORLD_HALLWAY">1</constant>
+    <constant name="WORLD_HOUSE_BEDROOM">0</constant>
+    <constant name="WORLD_HOUSE_HALLWAY">1</constant>
+    <constant name="WORLD_HOUSE_BATHROOM">2</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

@@ -1,11 +1,15 @@
 // scrLoadWorld(0: WorldId)
 
 switch (argument[0]){
-    case WORLD_BEDROOM:
-        scrLoadBedroom();
+    case WORLD_HOUSE_BEDROOM:
+        scrLoadHBedroom();
         break;
         
-    case WORLD_HALLWAY:
-        world[0] = scrCreateObject(scrGetModel(MDL_BEDROOM), texBedroom, TEX_FULL, 1, 1, 0, 0, 0);
+    case WORLD_HOUSE_HALLWAY:
+        scrLoadHHallway();
+        break;
+        
+    case WORLD_HOUSE_BATHROOM:
+        scrLoadHBathroom();
         break;
 }

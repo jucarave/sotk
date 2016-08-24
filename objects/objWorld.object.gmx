@@ -8,6 +8,32 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>bBoxes = ds_list_create();
+showDebugBBoxes = false;
+
+showGrayBoxes = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="1" enumb="0">
       <action>
         <libid>1</libid>
@@ -72,9 +98,6 @@
           <argument>
             <kind>1</kind>
             <string>scrLoadWorld(worldName);
-
-bBoxes = ds_list_create();
-showDebugBBoxes = false;
 </string>
           </argument>
         </arguments>
@@ -168,6 +191,40 @@ shader_reset();
     for (i=0;i&lt;len;i++){
         box = ds_list_find_value(bBoxes, i);
         d3d_draw_block(box[0],box[1],box[2],box[3],box[4],box[5],-1,1,1);
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (showGrayBoxes){
+    var ins, i, len;
+    
+    len = instance_number(objBlock);
+    for (i=0;i&lt;len;i++){
+        ins = instance_find(objBlock, i);
+        
+        if (ins.image_blend != c_white){
+            draw_set_color(ins.image_blend);
+            d3d_draw_block(ins.x, ins.y, 0, ins.x+32*ins.image_xscale, ins.y+32*ins.image_yscale, ins.height, -1, 1, 1);
+            draw_set_color(c_white);
+        }
     }
 }
 </string>
