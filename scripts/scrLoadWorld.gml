@@ -12,4 +12,8 @@ switch (argument[0]){
     case WORLD_HOUSE_BATHROOM:
         scrLoadHBathroom();
         break;
+        
+    case WORLD_HOUSE_STUDY:
+        scrLoadHStudy();
+        break;
 }
