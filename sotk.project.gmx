@@ -70,6 +70,8 @@
         <script>scripts\scrLoadHBathroom.gml</script>
         <script>scripts\scrLoadHStudy.gml</script>
         <script>scripts\scrLoadHLivingR.gml</script>
+        <script>scripts\scrLoadHStorage.gml</script>
+        <script>scripts\scrLoadHLaundry.gml</script>
       </scripts>
     </scripts>
     <scripts name="System">
@@ -121,8 +123,10 @@
     <room>rooms\rooHouseBathroom</room>
     <room>rooms\rooHouseStudy</room>
     <room>rooms\rooHouseLivingR</room>
+    <room>rooms\rooHouseStorage</room>
+    <room>rooms\rooHouseLaundry</room>
   </rooms>
-  <constants number="27">
+  <constants number="29">
     <constant name="MESH_MODEL">0</constant>
     <constant name="MESH_MAT">1</constant>
     <constant name="MESH_REPEAT">2</constant>
@@ -150,6 +154,8 @@
     <constant name="WORLD_HOUSE_BATHROOM">2</constant>
     <constant name="WORLD_HOUSE_STUDY">3</constant>
     <constant name="WORLD_HOUSE_LIVING_ROOM">4</constant>
+    <constant name="WORLD_HOUSE_STORAGE">5</constant>
+    <constant name="WORLD_HOUSE_LAUNDRY">6</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

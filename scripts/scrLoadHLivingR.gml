@@ -28,3 +28,13 @@ world[16] = scrCreateObject(scrCreateWalls(192, 576, 0, 64, 32, 100), texHouse, 
 ins = instance_create(0, 160, objDoor);
 ins.target = scrArray(rooHouseHallway, 80, 80, 180);
 ins.z = 0;
+
+// Storage Room Door
+ins = instance_create(160, 480, objDoor);
+ins.target = scrArray(rooHouseStorage, 112, 48, 180);
+ins.z = 0;
+
+// Laundry Room Door
+ins = instance_create(256, 480, objDoor);
+ins.target = scrArray(rooHouseLaundry, 48, 48, 0);
+ins.z = 0;

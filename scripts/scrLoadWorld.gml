@@ -20,4 +20,12 @@ switch (argument[0]){
     case WORLD_HOUSE_LIVING_ROOM:
         scrLoadHLivingR();
         break;
+        
+    case WORLD_HOUSE_STORAGE:
+        scrLoadHStorage();
+        break;
+        
+    case WORLD_HOUSE_LAUNDRY:
+        scrLoadHLaundry();
+        break;
 }

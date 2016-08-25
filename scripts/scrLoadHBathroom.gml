@@ -1,6 +1,6 @@
 var ins;
 
-world[1] = 0;
+world[6] = 0;
 
 world[0] = scrCreateObject(scrCreateFloor(0, 0, 0, 224, 192), texHouse, TEX_HOUSE_BATH_FLOOR, 7, 6, 0, 0, 0);
 
