@@ -69,6 +69,7 @@
         <script>scripts\scrLoadHHallway.gml</script>
         <script>scripts\scrLoadHBathroom.gml</script>
         <script>scripts\scrLoadHStudy.gml</script>
+        <script>scripts\scrLoadHLivingR.gml</script>
       </scripts>
     </scripts>
     <scripts name="System">
@@ -119,8 +120,9 @@
     <room>rooms\rooHouseHallway</room>
     <room>rooms\rooHouseBathroom</room>
     <room>rooms\rooHouseStudy</room>
+    <room>rooms\rooHouseLivingR</room>
   </rooms>
-  <constants number="26">
+  <constants number="27">
     <constant name="MESH_MODEL">0</constant>
     <constant name="MESH_MAT">1</constant>
     <constant name="MESH_REPEAT">2</constant>
@@ -147,6 +149,7 @@
     <constant name="WORLD_HOUSE_HALLWAY">1</constant>
     <constant name="WORLD_HOUSE_BATHROOM">2</constant>
     <constant name="WORLD_HOUSE_STUDY">3</constant>
+    <constant name="WORLD_HOUSE_LIVING_ROOM">4</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

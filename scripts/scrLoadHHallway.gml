@@ -32,3 +32,8 @@ ins.z = 0;
 ins = instance_create(32, 224, objDoor);
 ins.target = scrArray(rooHouseStudy, 176, 48, 270);
 ins.z = 0;
+
+// Living room door
+ins = instance_create(96, 64, objDoor);
+ins.target = scrArray(rooHouseLivingR, 48, 176, 0);
+ins.z = 0;

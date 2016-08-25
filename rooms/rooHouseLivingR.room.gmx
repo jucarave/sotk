@@ -2,7 +2,7 @@
 <room>
   <caption></caption>
   <width>853</width>
-  <height>480</height>
+  <height>604</height>
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
@@ -11,7 +11,7 @@
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code></code>
-  <enableViews>-1</enableViews>
+  <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
@@ -41,7 +41,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="&lt;undefined&gt;" xview="0" yview="0" wview="853" hview="480" xport="0" yport="0" wport="853" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -51,18 +51,22 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="objCamera" x="416" y="0" name="inst_17DE9313" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objWorld" x="416" y="16" name="inst_ADB8A258" locked="0" code="worldName = WORLD_HOUSE_STUDY;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBlock" x="0" y="0" name="inst_F17D70D4" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBlock" x="0" y="32" name="inst_B4A9379E" locked="0" code="" scaleX="1" scaleY="7" colour="4294967295" rotation="0"/>
-    <instance objName="objBlock" x="32" y="224" name="inst_7761D86E" locked="0" code="" scaleX="7" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBlock" x="224" y="32" name="inst_172053C1" locked="0" code="" scaleX="1" scaleY="6" colour="4294967295" rotation="0"/>
-    <instance objName="objDialog" x="432" y="16" name="inst_A8E59E40" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBlock" x="32" y="32" name="inst_2BBCD818" locked="0" code="height = 64;" scaleX="1" scaleY="4" colour="4286595136" rotation="0"/>
-    <instance objName="objBlock" x="32" y="192" name="inst_268E53D6" locked="0" code="height = 24;&#xA;" scaleX="1" scaleY="1" colour="4278222848" rotation="0"/>
-    <instance objName="objBlock" x="192" y="96" name="inst_DB36347B" locked="0" code="height = 24;&#xA;" scaleX="1" scaleY="4" colour="4286595136" rotation="0"/>
-    <instance objName="objBlock" x="160" y="192" name="inst_F592382B" locked="0" code="height = 24;&#xA;" scaleX="1" scaleY="1" colour="4286595136" rotation="0"/>
-    <instance objName="objBlock" x="160" y="128" name="inst_BDBA83DE" locked="0" code="height = 24;&#xA;" scaleX="1" scaleY="1" colour="4286611584" rotation="0"/>
+    <instance objName="objBlock" x="0" y="128" name="inst_93A035A0" locked="0" code="" scaleX="1" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="objCamera" x="512" y="0" name="inst_95E3BF6D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWorld" x="512" y="16" name="inst_447ADD86" locked="0" code="worldName = WORLD_HOUSE_LIVING_ROOM;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDialog" x="528" y="16" name="inst_A09B4906" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="32" y="128" name="inst_C819CFFE" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="32" y="352" name="inst_DB9EC10B" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="192" y="0" name="inst_2B9CC382" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="224" y="0" name="inst_C04957CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="256" y="0" name="inst_812DD88B" locked="0" code="" scaleX="1" scaleY="18" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="160" y="384" name="inst_61953CA4" locked="0" code="" scaleX="1" scaleY="6" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="160" y="576" name="inst_833C7CFA" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="32" y="224" name="inst_11235F92" locked="0" code="height = 24;&#xA;" scaleX="1" scaleY="2" colour="4286595136" rotation="0"/>
+    <instance objName="objBlock" x="160" y="224" name="inst_B34BEA65" locked="0" code="height = 24;&#xA;" scaleX="1" scaleY="2" colour="4278206592" rotation="0"/>
+    <instance objName="objBlock" x="64" y="320" name="inst_9272CECD" locked="0" code="height = 24;&#xA;" scaleX="2" scaleY="1" colour="4278206592" rotation="0"/>
+    <instance objName="objBlock" x="224" y="288" name="inst_CC96D326" locked="0" code="height = 24;&#xA;" scaleX="1" scaleY="2" colour="4286595136" rotation="0"/>
+    <instance objName="objBlock" x="96" y="224" name="inst_D5B02540" locked="0" code="height = 24;&#xA;" scaleX="1" scaleY="2" colour="4290822336" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
