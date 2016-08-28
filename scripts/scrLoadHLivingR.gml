@@ -38,3 +38,14 @@ ins.z = 0;
 ins = instance_create(256, 480, objDoor);
 ins.target = scrArray(rooHouseLaundry, 48, 48, 0);
 ins.z = 0;
+
+// Balcony door
+ins = instance_create(192, 576, objDoor);
+ins.target = scrArray(rooHouseBalcony, 496, 48, 270);
+ins.z = 0;
+ins.width = 64;
+
+// Kitchen Door
+ins = instance_create(128, 128, objDoor);
+ins.target = scrArray(rooHouseKitchen, 112, 176, 90);
+ins.z = 0;

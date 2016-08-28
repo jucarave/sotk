@@ -72,6 +72,8 @@
         <script>scripts\scrLoadHLivingR.gml</script>
         <script>scripts\scrLoadHStorage.gml</script>
         <script>scripts\scrLoadHLaundry.gml</script>
+        <script>scripts\scrLoadHBalcony.gml</script>
+        <script>scripts\scrLoadHKitchen.gml</script>
       </scripts>
     </scripts>
     <scripts name="System">
@@ -125,8 +127,10 @@
     <room>rooms\rooHouseLivingR</room>
     <room>rooms\rooHouseStorage</room>
     <room>rooms\rooHouseLaundry</room>
+    <room>rooms\rooHouseBalcony</room>
+    <room>rooms\rooHouseKitchen</room>
   </rooms>
-  <constants number="29">
+  <constants number="34">
     <constant name="MESH_MODEL">0</constant>
     <constant name="MESH_MAT">1</constant>
     <constant name="MESH_REPEAT">2</constant>
@@ -147,6 +151,9 @@
     <constant name="TEX_HOUSE_BATH_FLOOR">10</constant>
     <constant name="TEX_HOUSE_BATH_WALL">11</constant>
     <constant name="TEX_HOUSE_BATH_DOOR">12</constant>
+    <constant name="TEX_HOUSE_BALC_FLOOR">13</constant>
+    <constant name="TEX_HOUSE_BALC_BANISTER">14</constant>
+    <constant name="TEX_HOUSE_KITC_WALL">15</constant>
     <constant name="MDL_BEDROOM">"Rooms/bedroom.obj"</constant>
     <constant name="MDL_HAND">"Animations/handAnim.obj"</constant>
     <constant name="WORLD_HOUSE_BEDROOM">0</constant>
@@ -156,6 +163,8 @@
     <constant name="WORLD_HOUSE_LIVING_ROOM">4</constant>
     <constant name="WORLD_HOUSE_STORAGE">5</constant>
     <constant name="WORLD_HOUSE_LAUNDRY">6</constant>
+    <constant name="WORLD_HOUSE_BALCONY">7</constant>
+    <constant name="WORLD_HOUSE_KITCHEN">8</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

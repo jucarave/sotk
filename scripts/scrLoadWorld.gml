@@ -28,4 +28,12 @@ switch (argument[0]){
     case WORLD_HOUSE_LAUNDRY:
         scrLoadHLaundry();
         break;
+        
+    case WORLD_HOUSE_BALCONY:
+        scrLoadHBalcony();
+        break;
+        
+    case WORLD_HOUSE_KITCHEN:
+        scrLoadHKitchen();
+        break;
 }

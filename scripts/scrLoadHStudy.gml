@@ -20,3 +20,9 @@ world[8] = scrCreateObject(scrCreateWalls(96, 224, 0, 64, 32, 100), texHouse, TE
 ins = instance_create(192, 0, objDoor);
 ins.target = scrArray(rooHouseHallway, 48, 176, 90);
 ins.z = 0;
+
+// Balcony Door
+ins = instance_create(96, 224, objDoor);
+ins.target = scrArray(rooHouseBalcony, 112, 48, 270);
+ins.z = 0;
+ins.width = 64;
