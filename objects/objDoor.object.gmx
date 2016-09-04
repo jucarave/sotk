@@ -51,6 +51,8 @@ height = 32;
             <kind>1</kind>
             <string>objSystem.transferTo = target;
 objSystem.fade = 1;
+
+audio_play_sound(sndOpenDoor, 5, false);
 </string>
           </argument>
         </arguments>

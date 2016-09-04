@@ -102,6 +102,7 @@ rotz = 48;
         
         if (weaponAnim == ANIM_ATTACK){
             weaponAnim = ANIM_IDLE;
+            state = PLAYER_FSM.STAND;
         }
     }
 }else{
@@ -160,11 +161,11 @@ if (state == PLAYER_FSM.STAND || state == PLAYER_FSM.MOVING){
     if (dx != 0){ direction += dx / 5; }
     if (dy != 0){ zdirection += dy / 5; }
     
-    display_mouse_set(mx, my);
-    
     if (zdirection &gt; 80){ zdirection = 80; }
     else if (zdirection &lt; -80){ zdirection = -80; }
 }
+
+display_mouse_set(mx, my);
 </string>
           </argument>
         </arguments>
@@ -250,6 +251,7 @@ if (state == PLAYER_FSM.STAND || state == PLAYER_FSM.MOVING){
         if (hit[0] != -1) {
             var ins = hit[2];
             with (ins){ event_user(0); }
+            exit;
         }
     }
 }
@@ -274,8 +276,10 @@ if (state == PLAYER_FSM.STAND || state == PLAYER_FSM.MOVING){
           <argument>
             <kind>1</kind>
             <string>// Attack action
-if (mouse_check_button_pressed(mb_left)){
+if (mouse_check_button_pressed(mb_left) &amp;&amp; (state == PLAYER_FSM.STAND || state == PLAYER_FSM.MOVING)){
+    state = PLAYER_FSM.ATTACKING;
     weaponAnim = ANIM_ATTACK;
+    audio_play_sound(sndMissed, 5, false);
 }
 </string>
           </argument>

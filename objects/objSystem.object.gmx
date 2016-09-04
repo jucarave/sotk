@@ -130,7 +130,9 @@ if (keyboard_check_pressed(vk_escape)){
             <string>// Fade In - Out (transfer between rooms)
 if (fade == 1){
     transferAlpha += 0.1;
-    if (transferAlpha &gt;= 1){
+    if (transferAlpha &gt;= 1.0){
+        transferAlpha = 1.0;
+        if (audio_is_playing(sndOpenDoor)){ exit; }
         room_goto(transferTo[0]);
         fade = 2;
     }
@@ -138,6 +140,7 @@ if (fade == 1){
     var player = instance_create(transferTo[1], transferTo[2], objPlayer);
     player.direction = transferTo[3];
     fade = 3;
+    audio_play_sound(sndCloseDoor, 5, false);
 }else if (fade == 3){
     transferAlpha -= 0.1;
     if (transferAlpha &lt;= 0){

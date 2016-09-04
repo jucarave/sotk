@@ -1,4 +1,5 @@
 enum PLAYER_FSM {
     STAND,
-    MOVING
+    MOVING,
+    ATTACKING
 };

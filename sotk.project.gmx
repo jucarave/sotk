@@ -63,7 +63,11 @@
     </datafiles>
   </datafiles>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sndMissed</sound>
+    <sound>sound\sndOpenDoor</sound>
+    <sound>sound\sndCloseDoor</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprBlock</sprite>
   </sprites>
