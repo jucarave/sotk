@@ -24,3 +24,10 @@ global.UVS[TEX_HOUSE_BALC_FLOOR]             = scrArray( 220/w, 194/h,  32/w,  3
 global.UVS[TEX_HOUSE_BALC_BANISTER]          = scrArray( 150/w, 102/h,  64/w,  32/h);
 
 global.UVS[TEX_HOUSE_KITC_WALL]              = scrArray( 150/w, 136/h,  32/w, 100/h);
+
+// ITEMS
+w = 128;
+h = 64;
+
+global.UVS[TEX_ITEM_HAND]                    = scrArray(   0/w,   0/h,  64/w,  64/h);
+global.UVS[TEX_ITEM_STEELPIPE]               = scrArray(  64/w,   0/h,  64/w,  64/h);

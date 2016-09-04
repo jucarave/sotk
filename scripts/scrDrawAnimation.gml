@@ -10,13 +10,7 @@ shader_set(shdAnimation);
 shader_set_uniform_f(global.UNIFORM_ANIMATION_IND, animationInd);
 shader_set_uniform_f_array(global.UNIFORM_ANIMATION_POSITION, position);
 
-if (instance_exists(objLight)){
-    shader_set_uniform_f(global.UNIFORM_ANIMATION_LIGHT0_USE, 1);
-    shader_set_uniform_f_array(global.UNIFORM_ANIMATION_LIGHT0_POS, objLight.position);
-    shader_set_uniform_f_array(global.UNIFORM_ANIMATION_LIGHT0_COL, objLight.color);
-}else{
-    shader_set_uniform_f(global.UNIFORM_ANIMATION_LIGHT0_USE, 0);
-}
+scrUniformLights(shdAnimation);
 
 vertex_submit(model, pr_trianglelist, texture);
 

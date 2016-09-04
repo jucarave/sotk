@@ -143,27 +143,23 @@ showGrayBoxes = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_white);
-shader_set(shdBasic);
-
-if (instance_exists(objLight)){
-    shader_set_uniform_f(global.UNIFORM_LIGHT0_USE, 1);
-    shader_set_uniform_f_array(global.UNIFORM_LIGHT0_POS, objLight.position);
-    shader_set_uniform_f_array(global.UNIFORM_LIGHT0_COL, objLight.color);
-}else{
-    shader_set_uniform_f(global.UNIFORM_LIGHT0_USE, 0);
-}
-
-for (var i=0;i&lt;array_length_1d(world);i++){
-    var mdl = world[i];
+            <string>if (view_current == 0){
+    draw_set_color(c_white);
+    shader_set(shdBasic);
     
-    shader_set_uniform_f_array(global.UNIFORM_REPEAT, mdl[MESH_REPEAT]);
-    shader_set_uniform_f_array(global.UNIFORM_UV, mdl[MESH_UV]);
+    scrUniformLights(shdBasic);
     
-    d3d_model_draw(mdl[MESH_MODEL], mdl[MESH_X], mdl[MESH_Y], mdl[MESH_Z], mdl[MESH_MAT]);   
+    for (var i=0;i&lt;array_length_1d(world);i++){
+        var mdl = world[i];
+        
+        shader_set_uniform_f_array(global.UNIFORM_REPEAT, mdl[MESH_REPEAT]);
+        shader_set_uniform_f_array(global.UNIFORM_UV, mdl[MESH_UV]);
+        
+        d3d_model_draw(mdl[MESH_MODEL], mdl[MESH_X], mdl[MESH_Y], mdl[MESH_Z], mdl[MESH_MAT]);   
+    }
+    
+    shader_reset();
 }
-
-shader_reset();
 </string>
           </argument>
         </arguments>
@@ -184,13 +180,15 @@ shader_reset();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (showDebugBBoxes){
-    var i, len, box;
-    len = ds_list_size(bBoxes);
-    
-    for (i=0;i&lt;len;i++){
-        box = ds_list_find_value(bBoxes, i);
-        d3d_draw_block(box[0],box[1],box[2],box[3],box[4],box[5],-1,1,1);
+            <string>if (view_current == 0){
+    if (showDebugBBoxes){
+        var i, len, box;
+        len = ds_list_size(bBoxes);
+        
+        for (i=0;i&lt;len;i++){
+            box = ds_list_find_value(bBoxes, i);
+            d3d_draw_block(box[0],box[1],box[2],box[3],box[4],box[5],-1,1,1);
+        }
     }
 }
 </string>
@@ -213,17 +211,19 @@ shader_reset();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (showGrayBoxes){
-    var ins, i, len;
-    
-    len = instance_number(objBlock);
-    for (i=0;i&lt;len;i++){
-        ins = instance_find(objBlock, i);
+            <string>if (view_current == 0){
+    if (showGrayBoxes){
+        var ins, i, len;
         
-        if (ins.image_blend != c_white){
-            draw_set_color(ins.image_blend);
-            d3d_draw_block(ins.x, ins.y, 0, ins.x+32*ins.image_xscale, ins.y+32*ins.image_yscale, ins.height, -1, 1, 1);
-            draw_set_color(c_white);
+        len = instance_number(objBlock);
+        for (i=0;i&lt;len;i++){
+            ins = instance_find(objBlock, i);
+            
+            if (ins.image_blend != c_white){
+                draw_set_color(ins.image_blend);
+                d3d_draw_block(ins.x, ins.y, 0, ins.x+32*ins.image_xscale, ins.y+32*ins.image_yscale, ins.height, -1, 1, 1);
+                draw_set_color(c_white);
+            }
         }
     }
 }
