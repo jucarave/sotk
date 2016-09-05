@@ -3,6 +3,8 @@
 //weaponAnim = ANIM_ATTACK;
 //weaponAnimInd = 4;
 
+if (!is_array(weapon)){ exit; }
+
 var frame1 = weapon[weaponAnim, floor(weaponAnimInd)],
     frame2 = weapon[weaponAnim, 1];
 

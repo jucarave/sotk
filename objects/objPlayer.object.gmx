@@ -60,7 +60,7 @@ display_mouse_set(mx, my);
           <argument>
             <kind>1</kind>
             <string>// Weapons and attack
-weapon = objSystem.steelPipe;
+weapon = global.PL_WEAPON;
 weaponAnim = ANIM_IDLE;
 weaponAnimInd = 1;
 weaponAnimSpd = 0.3;
@@ -70,9 +70,9 @@ posx = 24;
 posy = -5;
 posz = -21;
 
-rotx = -10;
-roty = -75;
-rotz = 48;
+rotx = 0;
+roty = 0;
+rotz = 0;
 </string>
           </argument>
         </arguments>
@@ -95,7 +95,8 @@ rotz = 48;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (weapon[weaponAnim, MDL_NUM_FRAMES] &gt; 1){
+            <string>if (!is_array(weapon)){ exit; }
+if (weapon[weaponAnim, MDL_NUM_FRAMES] &gt; 1){
     weaponAnimInd += weaponAnimSpd;
     if (weaponAnimInd &gt;= weapon[weaponAnim, MDL_NUM_FRAMES] + 1){
         weaponAnimInd = 1;
@@ -276,10 +277,14 @@ if (state == PLAYER_FSM.STAND || state == PLAYER_FSM.MOVING){
           <argument>
             <kind>1</kind>
             <string>// Attack action
-if (mouse_check_button_pressed(mb_left) &amp;&amp; (state == PLAYER_FSM.STAND || state == PLAYER_FSM.MOVING)){
+if (is_array(weapon) &amp;&amp; 
+    mouse_check_button_pressed(mb_left) &amp;&amp; 
+    (state == PLAYER_FSM.STAND || state == PLAYER_FSM.MOVING)){
+    
     state = PLAYER_FSM.ATTACKING;
     weaponAnim = ANIM_ATTACK;
     audio_play_sound(sndMissed, 5, false);
+    
 }
 </string>
           </argument>

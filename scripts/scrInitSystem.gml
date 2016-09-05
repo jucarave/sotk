@@ -4,6 +4,10 @@
 global.RES_WIDTH = 853;
 global.RES_HEIGHT = 480;
 
+// Player variables
+global.PL_ITEMS[0] = 0;
+global.PL_WEAPON = -1;
+
 // Basic shader
 global.UNIFORM_UV = shader_get_uniform(shdBasic, "uUV");
 global.UNIFORM_REPEAT = shader_get_uniform(shdBasic, "uRepeat");

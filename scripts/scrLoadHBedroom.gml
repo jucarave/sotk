@@ -37,3 +37,12 @@ ins.z = 0;
 /*ins = instance_create(45, 45, objLight);
 ins.z = 28;
 ins.color = scrArray(1.0, 1.0, 1.0);*/
+
+if (!global.F_PICKED_STEEL_PIPE){
+    ins = instance_create(208, 120, objWeapon);
+    ins.weapon = objSystem.steelPipe;
+    ins.z = 26;
+    ins.rx = 90;
+    ins.rz = 200;
+    scrSubscribeBoundingBox(196, 90, 24, 15, 32, 2, ins);
+}

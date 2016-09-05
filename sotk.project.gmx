@@ -102,11 +102,13 @@
     </scripts>
     <scripts name="System">
       <script>scripts\scrSubscribeBoundingBox.gml</script>
+      <script>scripts\scrUnsubscribeBoundingBox.gml</script>
       <script>scripts\scrMix.gml</script>
       <script>scripts\scrArray.gml</script>
       <script>scripts\scrStringExplode.gml</script>
       <script>scripts\scrRaycast.gml</script>
       <script>scripts\scrInitSystem.gml</script>
+      <script>scripts\scrInitFlags.gml</script>
       <script>scripts\scrInitTextures.gml</script>
       <script>scripts\scrInitEnums.gml</script>
       <script>scripts\scrInitWeapons.gml</script>
@@ -118,9 +120,6 @@
       <script>scripts\scrParseAnimation.gml</script>
       <script>scripts\scrDrawAnimation.gml</script>
       <script>scripts\scrUniformLights.gml</script>
-    </scripts>
-    <scripts name="Flags">
-      <script>scripts\scrInitFlags.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -136,6 +135,7 @@
       <object>objects\objHand</object>
       <object>objects\objLight</object>
       <object>objects\objDoor</object>
+      <object>objects\objWeapon</object>
     </objects>
     <objects name="System">
       <object>objects\objSystem</object>
