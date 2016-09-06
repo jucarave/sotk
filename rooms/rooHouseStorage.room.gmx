@@ -55,7 +55,7 @@
     <instance objName="objBlock" x="32" y="0" name="inst_DD1D55D8" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="160" y="0" name="inst_78D3D5CA" locked="0" code="" scaleX="1" scaleY="6" colour="4294967295" rotation="0"/>
     <instance objName="objCamera" x="512" y="0" name="inst_95E3BF6D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objWorld" x="512" y="16" name="inst_447ADD86" locked="0" code="worldName = WORLD_HOUSE_STORAGE;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWorld" x="512" y="16" name="inst_447ADD86" locked="0" code="worldName = WORLD.HOUSE_STORAGE;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDialog" x="528" y="16" name="inst_A09B4906" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="32" y="160" name="inst_8A57597E" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="32" y="128" name="inst_D81CB5F2" locked="0" code="height = 64;" scaleX="4" scaleY="1" colour="4286595136" rotation="0"/>

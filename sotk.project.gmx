@@ -158,7 +158,7 @@
     <room>rooms\rooHouseBalcony</room>
     <room>rooms\rooHouseKitchen</room>
   </rooms>
-  <constants number="49">
+  <constants number="38">
     <constant name="MESH_MODEL">0</constant>
     <constant name="MESH_MAT">1</constant>
     <constant name="MESH_REPEAT">2</constant>
@@ -184,17 +184,6 @@
     <constant name="TEX_HOUSE_KITC_WALL">15</constant>
     <constant name="TEX_ITEM_HAND">16</constant>
     <constant name="TEX_ITEM_STEELPIPE">17</constant>
-    <constant name="MDL_BEDROOM">"Rooms/bedroom.obj"</constant>
-    <constant name="MDL_HAND">"Animations/handAnim.obj"</constant>
-    <constant name="WORLD_HOUSE_BEDROOM">0</constant>
-    <constant name="WORLD_HOUSE_HALLWAY">1</constant>
-    <constant name="WORLD_HOUSE_BATHROOM">2</constant>
-    <constant name="WORLD_HOUSE_STUDY">3</constant>
-    <constant name="WORLD_HOUSE_LIVING_ROOM">4</constant>
-    <constant name="WORLD_HOUSE_STORAGE">5</constant>
-    <constant name="WORLD_HOUSE_LAUNDRY">6</constant>
-    <constant name="WORLD_HOUSE_BALCONY">7</constant>
-    <constant name="WORLD_HOUSE_KITCHEN">8</constant>
     <constant name="MDL_MODEL">0</constant>
     <constant name="MDL_TEXTURE">1</constant>
     <constant name="MDL_REPEAT">2</constant>

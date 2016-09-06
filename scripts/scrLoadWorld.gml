@@ -1,39 +1,39 @@
 // scrLoadWorld(0: WorldId)
 
 switch (argument[0]){
-    case WORLD_HOUSE_BEDROOM:
+    case WORLD.HOUSE_BEDROOM:
         scrLoadHBedroom();
         break;
         
-    case WORLD_HOUSE_HALLWAY:
+    case WORLD.HOUSE_HALLWAY:
         scrLoadHHallway();
         break;
         
-    case WORLD_HOUSE_BATHROOM:
+    case WORLD.HOUSE_BATHROOM:
         scrLoadHBathroom();
         break;
         
-    case WORLD_HOUSE_STUDY:
+    case WORLD.HOUSE_STUDY:
         scrLoadHStudy();
         break;
         
-    case WORLD_HOUSE_LIVING_ROOM:
+    case WORLD.HOUSE_LIVING_ROOM:
         scrLoadHLivingR();
         break;
         
-    case WORLD_HOUSE_STORAGE:
+    case WORLD.HOUSE_STORAGE:
         scrLoadHStorage();
         break;
         
-    case WORLD_HOUSE_LAUNDRY:
+    case WORLD.HOUSE_LAUNDRY:
         scrLoadHLaundry();
         break;
         
-    case WORLD_HOUSE_BALCONY:
+    case WORLD.HOUSE_BALCONY:
         scrLoadHBalcony();
         break;
         
-    case WORLD_HOUSE_KITCHEN:
+    case WORLD.HOUSE_KITCHEN:
         scrLoadHKitchen();
         break;
 }

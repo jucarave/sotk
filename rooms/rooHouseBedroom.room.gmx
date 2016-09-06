@@ -55,7 +55,7 @@
   </views>
   <instances>
     <instance objName="objCamera" x="416" y="0" name="inst_17DE9313" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objWorld" x="416" y="16" name="inst_ADB8A258" locked="0" code="worldName = WORLD_HOUSE_BEDROOM;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWorld" x="416" y="16" name="inst_ADB8A258" locked="0" code="worldName = WORLD.HOUSE_BEDROOM;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="32" y="64" name="inst_82E4FE72" locked="0" code="height = 24;" scaleX="2" scaleY="2" colour="4278223040" rotation="0"/>
     <instance objName="objBlock" x="32" y="192" name="inst_2AC52801" locked="0" code="height = 64;" scaleX="2" scaleY="1" colour="4286595136" rotation="0"/>
     <instance objName="objBlock" x="192" y="32" name="inst_020DF662" locked="0" code="height = 24;" scaleX="1" scaleY="3" colour="4286595136" rotation="0"/>
