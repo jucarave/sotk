@@ -34,13 +34,14 @@ ins.target = scrArray(rooHouseHallway, 48, 48, 270);
 ins.z = 0;
 
 // Desk lamp light
-/*ins = instance_create(45, 45, objLight);
-ins.z = 28;
+/*ins = instance_create(128, 48, objLight);
+ins.z = 48;
 ins.color = scrArray(1.0, 1.0, 1.0);*/
 
-if (!global.F_PICKED_STEEL_PIPE){
-    ins = instance_create(208, 120, objWeapon);
-    ins.weapon = objSystem.steelPipe;
+var steelPipeHash = 0;
+if (!global.F_PICKED_ITEMS[steelPipeHash]){
+    ins = instance_create(208, 120, objItem);
+    ins.item = scrCreateItem(objSystem.steelPipe, 1, steelPipeHash);
     ins.z = 26;
     ins.rx = 90;
     ins.rz = 200;

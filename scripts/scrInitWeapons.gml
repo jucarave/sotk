@@ -5,6 +5,10 @@ steelPipe[0, MDL_MODEL] = scrGetModel("Items/steelPipe.obj");
 steelPipe[0, MDL_TEXTURE] = background_get_texture(texItems);
 steelPipe[0, MDL_REPEAT] = scrArray(1, 1);
 steelPipe[0, MDL_UVS] = global.UVS[TEX_ITEM_STEELPIPE];
+steelPipe[0, MDL_TYPE] = ITEM_TYPES.WEAPON;
+steelPipe[0, MDL_NAME] = "Steel pipe";
+steelPipe[0, MDL_DESC] = "A 1m steel pipe, quite heavy but still easy to use.";
+steelPipe[0, MDL_INV_IND] = 0;
 
 // Idle animation
 steelPipe[ANIM_IDLE, MDL_NUM_FRAMES] = 1;

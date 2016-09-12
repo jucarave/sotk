@@ -1,7 +1,9 @@
 enum PLAYER_FSM {
     STAND,
     MOVING,
-    ATTACKING
+    ATTACKING,
+    INVENTORY,
+    INVENTORY_SELECT
 };
 
 enum WORLD {
@@ -14,4 +16,10 @@ enum WORLD {
     HOUSE_LAUNDRY,
     HOUSE_BALCONY,
     HOUSE_KITCHEN
+};
+
+enum ITEM_TYPES {
+    WEAPON,
+    HEALING,
+    KEY
 };

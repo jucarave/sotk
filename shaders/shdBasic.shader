@@ -78,9 +78,10 @@ void main() {
     if (uUseLight0 >= 0.5){
         vec3 lPos = (uLight0_pos - v_position);
         vec3 dir = normalize(lPos);
+        float dist = length(lPos);
         
         float weight = max(dot(normalize(v_normal), dir), 0.0);
-        vec2 coord = floor(vec2(v_coord.x / v_coord.w * 0.5 + 0.5, v_coord.y / v_coord.w * 0.5 + 0.5) * resolution);
+        /*vec2 coord = floor(vec2(v_coord.x / v_coord.w * 0.5 + 0.5, v_coord.y / v_coord.w * 0.5 + 0.5) * resolution);
         
         if (weight > 0.3){
             weight = 1.0;
@@ -88,9 +89,17 @@ void main() {
             weight = ditherLight(weight, 0.3, 1.0, 0.8, coord);
         }else{
             weight = 0.8;
+        }*/
+        
+        float att = 853.0  / (1.0 + 0.6 * dist + 0.6 * 0.6 * dist * dist);
+        vec3 ambientL = vec3(0.1);
+        vec3 mixWeight = min(weight * att * uLight0_col + ambientL, 1.0);
+        
+        if (col.r == 1.0 && col.g == 1.0 && col.b == 1.0){
+            mixWeight = vec3(1.0);
         }
         
-        col.rgb *= weight * uLight0_col;
+        col.rgb *= mixWeight;
     }
     
     gl_FragColor = col;

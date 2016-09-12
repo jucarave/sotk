@@ -1,3 +1,4 @@
 global.F_START_GAME = true;
 
-global.F_PICKED_STEEL_PIPE = false;
+// Item Hashes
+global.F_PICKED_ITEMS[0] = false; // Steel Pipe Hash

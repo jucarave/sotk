@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>weapon = -1;
+            <string>item = -1;
 
 rx = 0;
 ry = 0;
@@ -75,10 +75,13 @@ rz = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>objPlayer.weapon = weapon;
-global.PL_WEAPON = weapon;
-global.F_PICKED_STEEL_PIPE = true;
-instance_destroy();
+            <string>var model = item[ITEM_MDL];
+
+if (model[MDL_TYPE] == ITEM_TYPES.WEAPON){
+    ds_list_add(global.PL_ITEMS, item);
+    global.F_PICKED_ITEMS[item[ITEM_HASH]] = true;
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -101,16 +104,18 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!is_array(weapon)) exit;
+            <string>if (!is_array(item)) exit;
 if (view_current != 0) exit;
+
+var mdl = item[ITEM_MDL];
 
 shader_set(shdBasic);
 d3d_set_culling(false);
 
 scrUniformLights(shdBasic);
 
-shader_set_uniform_f_array(global.UNIFORM_REPEAT, weapon[0, MDL_REPEAT]);
-shader_set_uniform_f_array(global.UNIFORM_UV, weapon[0, MDL_UVS]);
+shader_set_uniform_f_array(global.UNIFORM_REPEAT, mdl[0, MDL_REPEAT]);
+shader_set_uniform_f_array(global.UNIFORM_UV, mdl[0, MDL_UVS]);
 
 d3d_transform_set_identity();
 
@@ -121,7 +126,7 @@ d3d_transform_add_rotation_y(ry);
 d3d_transform_add_rotation_z(rz);
 d3d_transform_add_translation(x, y, z);
 
-d3d_model_draw(weapon[0, MDL_MODEL], 0, 0, 0, weapon[0, MDL_TEXTURE]);
+d3d_model_draw(mdl[0, MDL_MODEL], 0, 0, 0, mdl[0, MDL_TEXTURE]);
 
 d3d_transform_set_identity();
 

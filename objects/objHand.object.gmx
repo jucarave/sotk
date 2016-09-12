@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>model = scrGetModel(MDL_HAND);
-tex = background_get_texture(texHand);
+            <string>model = scrGetModel("Animations/handAnim.obj");
+tex = background_get_texture(texItems);
 
 position = scrArray(0, 0, 0);
 
