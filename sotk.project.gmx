@@ -70,6 +70,8 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprBlock</sprite>
+    <sprite>sprites\sprInventory</sprite>
+    <sprite>sprites\sprInventorySelect</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\texHouse</background>
@@ -81,6 +83,7 @@
     <scripts name="Player">
       <script>scripts\scrMoveTo.gml</script>
       <script>scripts\scrDrawWeapon.gml</script>
+      <script>scripts\scrInventoryHandler.gml</script>
     </scripts>
     <scripts name="WorldBuilder">
       <script>scripts\scrCreateFloor.gml</script>
@@ -112,6 +115,7 @@
       <script>scripts\scrInitTextures.gml</script>
       <script>scripts\scrInitEnums.gml</script>
       <script>scripts\scrInitWeapons.gml</script>
+      <script>scripts\scrUseItem.gml</script>
     </scripts>
     <scripts name="3D">
       <script>scripts\scrGetModel.gml</script>
@@ -120,6 +124,10 @@
       <script>scripts\scrParseAnimation.gml</script>
       <script>scripts\scrDrawAnimation.gml</script>
       <script>scripts\scrUniformLights.gml</script>
+    </scripts>
+    <scripts name="Inventory">
+      <script>scripts\scrCreateItem.gml</script>
+      <script>scripts\scrDrawInventory.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -135,7 +143,7 @@
       <object>objects\objHand</object>
       <object>objects\objLight</object>
       <object>objects\objDoor</object>
-      <object>objects\objWeapon</object>
+      <object>objects\objItem</object>
     </objects>
     <objects name="System">
       <object>objects\objSystem</object>
@@ -158,7 +166,7 @@
     <room>rooms\rooHouseBalcony</room>
     <room>rooms\rooHouseKitchen</room>
   </rooms>
-  <constants number="38">
+  <constants number="46">
     <constant name="MESH_MODEL">0</constant>
     <constant name="MESH_MAT">1</constant>
     <constant name="MESH_REPEAT">2</constant>
@@ -188,6 +196,10 @@
     <constant name="MDL_TEXTURE">1</constant>
     <constant name="MDL_REPEAT">2</constant>
     <constant name="MDL_UVS">3</constant>
+    <constant name="MDL_TYPE">4</constant>
+    <constant name="MDL_NAME">5</constant>
+    <constant name="MDL_DESC">6</constant>
+    <constant name="MDL_INV_IND">7</constant>
     <constant name="MDL_NUM_FRAMES">0</constant>
     <constant name="ANIM_FRAME_X">0</constant>
     <constant name="ANIM_FRAME_Y">1</constant>
@@ -197,6 +209,10 @@
     <constant name="ANIM_FRAME_RZ">5</constant>
     <constant name="ANIM_IDLE">1</constant>
     <constant name="ANIM_ATTACK">2</constant>
+    <constant name="ITEM_MDL">0</constant>
+    <constant name="ITEM_AMOUNT">1</constant>
+    <constant name="ITEM_HASH">2</constant>
+    <constant name="ITEM_EQUIPPED">3</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
